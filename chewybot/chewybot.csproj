@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Input\Command.cs" />
+    <Compile Include="Input\Options.cs" />
     <Compile Include="Interface\IChewyBotPlugin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

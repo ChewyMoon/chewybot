@@ -19,5 +19,12 @@ namespace ChewyBot.Interface
         /// <param name="args">The arguements of the command. The first item in the array([0]) is the command.</param>
         /// <returns><see cref="CommandResult" />. This can use bitwise operations.</returns>
         CommandResult HandleCommand(string[] args);
+
+        /// <summary>
+        ///     Gets help on the command provided.
+        /// </summary>
+        /// <param name="command">Command</param>
+        /// <returns>String that will be shown to the user.</returns>
+        string GetHelp(string command);
     }
 }

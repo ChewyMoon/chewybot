@@ -14,7 +14,7 @@ namespace ChewyBot.Input
         /// <summary>
         ///     Commands that are included by default in the system.
         /// </summary>
-        public static string[] SystemCommands = { "help", "set" };
+        public static string[] SystemCommands = { "help", "set-option" };
 
         /// <summary>
         ///     Processes the command given.
@@ -23,10 +23,11 @@ namespace ChewyBot.Input
         /// <returns><see cref="CommandResult" />. This can return a bitwise operation of results.</returns>
         public static CommandResult ProcessCommand(string[] args)
         {
+            Console.WriteLine();
             try
             {
                 // Check if the command is a system command, and handle it.
-                if (SystemCommands.Any(x => Equals(SystemCommands, StringComparison.InvariantCultureIgnoreCase)))
+                if (SystemCommands.Any(x => x.Equals(args[0].ToLower())))
                 {
                     return ExecuteCommand(Assembly.GetExecutingAssembly(), args);
                 }
